@@ -1,5 +1,7 @@
 <?php
 
+include 'dbconnect.php';
+
 $username_error = "";
 $password_error = "";
 
@@ -8,8 +10,8 @@ $password_error = "";
 if ($_SERVER["REQUEST_METHOD"]== "POST") {
 
     //Making the SQL connection
-    $SQL = $connection->prepare('SELECT * FROM `users` WHERE `username`= :USERNAME' );
-    $SQL = $connection->prepare('SELECT * FROM `users` WHERE `password`= :PASSWORD' );
+    $SQL = $connection->prepare('SELECT * FROM `users` WHERE `user_name`= :USERNAME' );
+    $SQL = $connection->prepare('SELECT * FROM `users` WHERE `user_pass`= :PASSWORD' );
     //Binding the parameteres
     $SQL ->bindParam(':USERNAME', $_POST['username'], PDO::PARAM_STR);
     $SQL ->execute();
