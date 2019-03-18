@@ -1,23 +1,5 @@
-<?php include 'header.php';?>
+<?php include './partials/header.php';?>
 
+<?php include './partials/message.php';?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php include 'footer.php'; ?>
+<?php include './partials/footer.php'; ?>
