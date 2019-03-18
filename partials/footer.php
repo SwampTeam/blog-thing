@@ -3,7 +3,7 @@
 
 
 <footer>
-<p>copyright  The Group Thing 2019</p>
+<p>copyright 3T 2019</p>
 </footer>
 
 </body>

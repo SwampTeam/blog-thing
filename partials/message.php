@@ -8,7 +8,7 @@ for ($count = 0; $count < count($result); $count++) {
 
 
 ?>
-
+        <p><?php echo $result[$count]['username']?></p>
         <h2><?php echo $result[$count]['title']?></h2>
 
         <p>
