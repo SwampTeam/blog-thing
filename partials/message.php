@@ -10,7 +10,11 @@ for ($count = 0; $count < count($result); $count++) {
 ?>
 
         <h2><?php echo $result[$count]['title']?></h2>
-        <p><?php echo $result[$count]['message']?></p>
+
+        <p>
+        <img src=" <?php echo $result[$count]['image']?>" alt="">
+         <?php echo $result[$count]['message']?></p>
+        
 
 <?php
         }
