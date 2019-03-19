@@ -19,10 +19,10 @@
 <article class="header">
     <h1>The Group Thing's Blog Thing</h1>
     <ul>
-        <li> <i class="fas fa-home"></i><a href=""> Home </a> </li>
-        <li> <i class="fas fa-comments"></i> <a href=""> Messages </a> </li>
-        <li> <i class="fas fa-key"></i> <a href=""> Login </a> </li>
-        <li> <i class="fas fa-search"></i><a href=""> Search </a> </li>
+        <li> <i class="fas fa-home"></i><a href="index.php"> Home </a> </li>
+        <li> <i class="fas fa-comments"></i> <a href="full-message"> Messages </a> </li>
+        <li> <i class="fas fa-key"></i> <a href="user-profile.php"> Login </a> </li>
+        <li> <i class="fas fa-search"></i><a href="search.php"> Search </a> </li>
     </ul>
 </article>
 </header>
@@ -36,7 +36,7 @@
     <div> <p class="user">username</p>
     </div>    
     <div class="content-message">
-        <img src="./images/test.jpg" alt="" style="width:300px">
+        <img src="./images/test.jpg" alt="" style="width:300px; height:300px">
         <h2 class="title">Message title</h2>
         <p class="message">  Content of the message</p>
     </div>
