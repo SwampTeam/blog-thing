@@ -9,7 +9,7 @@ if ($_SESSION["loggedin"] == true) {
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //TODO user_id need to be passed as param in the query
-        $SQL = $connection->prepare("INSERT INTO messages SET message = :message, users_id = '1', title=:title, image_path=:image");
+        $SQL = $connection->prepare("INSERT INTO messages SET message = :message, user_id = 1, title = :title, image_path = :image");
         $SQL->bindparam(':title', $_POST['title'], PDO::PARAM_STR);
         $SQL->bindparam(':message', $_POST['message'], PDO::PARAM_STR);
 
@@ -21,7 +21,7 @@ if ($_SESSION["loggedin"] == true) {
 
         if ($SQL->execute()) {
 
-            header("Location: messages.php");
+            header("Location: index.php");
         } else {
             echo "There was a error adding your message, sorry about that.";
             print_r($SQL->errorInfo());
