@@ -5,38 +5,36 @@ include 'message-form-functions.php';
 // Need to add a include of the connection to the database
 
 
-if($_SESSION["loggedin"]== true) {
+if ($_SESSION["loggedin"] == true) {
 
-    if($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-        $SQL = $connection->prepare('INSERT INTO messages SET message = :message, title=:title, img=:image');
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        //TODO user_id need to be passed as param in the query
+        $SQL = $connection->prepare("INSERT INTO messages SET message = :message, users_id = '1', title=:title, image_path=:image");
         $SQL->bindparam(':title', $_POST['title'], PDO::PARAM_STR);
         $SQL->bindparam(':message', $_POST['message'], PDO::PARAM_STR);
 
         if (!empty($_FILES['image'])) {
             $ImagetoDB = ProcessImage($_FILES['image']);
-            $SQL->bindParam(':image', $_POST['image'], PDO::PARAM_STR);
+            $SQL->bindParam(':image', $ImagetoDB, PDO::PARAM_STR);
         }
 
 
         if ($SQL->execute()) {
 
-            header("Location: list.php?=id" . $connection->lastInserId() . "");
+            header("Location: messages.php");
         } else {
             echo "There was a error adding your message, sorry about that.";
             print_r($SQL->errorInfo());
             $SQL->debugDumpParams();
             var_dump($_POST);
         }
-    }
-
-    else {
+    } else {
 
         ?>
         <form method="POST" action="message-form.php" enctype="multipart/form-data">
             <div>
                 <label for="title">Title of your message</label>
-                <input type="text" name="title" value=""></input>
+                <input type="text" name="title" value="">
             </div>
 
             <div>
@@ -46,7 +44,7 @@ if($_SESSION["loggedin"]== true) {
 
             <div>
                 <label for="image">Choose an image for your message</label>
-                <input type="file" name="image"</input>
+                <input type="file" name="image">
             </div>
             <div>
                 <button class="btn btn-default" type="submit">Submit</button>
