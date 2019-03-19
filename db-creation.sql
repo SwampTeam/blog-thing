@@ -13,7 +13,7 @@ SET
 -- -----------------------------------------------------
 CREATE DATABASE IF NOT EXISTS blog_db CHARACTER SET UTF8 COLLATE  'utf8_general_ci';
 CREATE USER IF NOT EXISTS 'student' IDENTIFIED BY 'numericall';
-GRANT ALL PRIVILEGES ON * . blog_db TO 'student';
+GRANT ALL PRIVILEGES ON blog_db.* TO 'student';
 -- -----------------------------------------------------
 -- Table `blog_db`.`messages`
 -- -----------------------------------------------------
