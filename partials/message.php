@@ -1,6 +1,5 @@
 <?php
 session_start();
-include './dbconnect.php';
 
 include './dbconnect.php';
 
@@ -36,9 +35,5 @@ for ($count = 0; $count < count($result); $count++) {
         }
     }
 }
-//Apolline code to put back if my fix does not work
-/*        <h2><?php echo $result[$count]['title']?></h2>
 
-        <p>
-        <img src=" <?php echo $result[$count]['image']?>" alt="">
-         <?php echo $result[$count]['message']?></p>*/
+
