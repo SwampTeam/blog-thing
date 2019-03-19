@@ -16,7 +16,6 @@ for ($count = 0; $count < count($result); $count++) {
         $shortStr = mb_strimwidth($result[$count]['message'], 0, 100,'...');
 ?>
 
-
 <article class="new-message2">
     <div> <p class="user"><?php echo $result[$count]['user_id']?></p>
     </div>    
