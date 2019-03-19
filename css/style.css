@@ -16,7 +16,8 @@ h1{
     font-style: bold;
     font-size: 24px;
     text-align: center;
-    padding:15px;
+    padding: 15px;
+    color:#ff4757;
 }
 
 
@@ -41,7 +42,7 @@ h1{
     display: block;
     padding: 15px;
     text-decoration: none;
-    color: #2f3542;;
+    color: #2f3542;
     font-weight: 800;
     text-transform: uppercase;
     margin: 0 10px;
@@ -139,6 +140,10 @@ h1{
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     border-radius: 3px;
+}
+
+img{
+    border-radius:10px;
 }
 
 

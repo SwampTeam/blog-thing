@@ -20,7 +20,7 @@
     <h1>The Group Thing's Blog Thing</h1>
     <ul>
         <li> <i class="fas fa-home"></i><a href="index.php"> Home </a> </li>
-        <li> <i class="fas fa-comments"></i> <a href="full-message"> Messages </a> </li>
+        <li> <i class="fas fa-comments"></i> <a href="full-message.php"> Messages </a> </li>
         <li> <i class="fas fa-key"></i> <a href="user-profile.php"> Login </a> </li>
         <li> <i class="fas fa-search"></i><a href="search.php"> Search </a> </li>
     </ul>
@@ -38,9 +38,9 @@
     <div class="content-message">
         <img src="./images/test.jpg" alt="" style="width:300px; height:300px">
         <h2 class="title">Message title</h2>
-        <p class="message">  Content of the message</p>
+        <p class="message"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque saepe, modi in accusamus voluptate omnis odio autem eveniet fuga ex libero cupiditate iste minima? Illum nesciunt commodi quo rerum odio.Quidem apud haec saepe saepeque cladibus inpunitate morem adulescentem et et sola ut ex usitatum usitatum peius amphitheatrali sunt cladibus ad obiecti consortes quod morem quidem quidem iactitabant Iconium saepeque obiecti occultis inopinis amphitheatrali cladibus saepe quod saepeque saepe Iconium sola in morem oppidum ut miscere et bella quidam amphitheatrali raris Pisidiae vehementer spectaculo et occultis gravia motibus gravia eorum pacari obiecti usitatum vehementer consortes miscere cuncta eorum adulescentem morem Namque spectaculo diu eorum Namque in quidem est quod usitatum ut adulescentem iactitabant bella obiecti praedatricibus spiritus Isauri saepe latrociniis sane ut inpunitate erigentes perduelles gravia ad diu Pisidiae ut.</p>
     </div>
-    <button type="button"  class="read-message"> <a href="./partials/full-mesage.php"> <p class="read">Read more </p></a> </button>
+    <button type="button"  class="read-message"> <a href="./partials/full-message.php"> <p class="read">Read more </p></a> </button>
 </article>
 
 <!DOCTYPE html>
