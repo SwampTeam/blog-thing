@@ -11,7 +11,6 @@ for ($count = 0; $count < count($result); $count++) {
 
 ?>
 
-
 <article class="new-message2">
     <div> <p class="user"><?php echo $result[$count]['username']?></p>
     </div>    
