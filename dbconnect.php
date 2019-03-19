@@ -1,9 +1,9 @@
 <?php
 
 $db = 'blog_db';
-$host = 'localhost';
-$user = 'root';
-$pass = '';
+$host = '192.168.210.123';
+$user = 'student';
+$pass = 'numericall';
 
 
 $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
