@@ -9,33 +9,27 @@ $password_error = "";
 // Processing the form data when its submitted
 if ($_SERVER["REQUEST_METHOD"]== "POST") {
 
-    //Making the SQL connection
-    $SQL = $connection->prepare('SELECT * FROM `users` WHERE `user_name`= :USERNAME' );
-    $SQL = $connection->prepare('SELECT * FROM `users` WHERE `user_pass`= :PASSWORD' );
-    //Binding the parameteres
-    $SQL ->bindParam(':USERNAME', $_POST['username'], PDO::PARAM_STR);
-    $SQL ->execute();
-    //Executing the SQL
-    $result = $SQL->fetch();
-    if($result['username']) {
-        //Verifying the password
-        if(password_verify($_POST['password'], $result['password'])) {
-            session_start();
+//FillIn SQL with the Bind params :USERNAME
+$SQL = $connection->prepare('SELECT * FROM users WHERE user_name = :USERNAME');
+$SQL->bindParam(':USERNAME', $_POST['username'], PDO::PARAM_STR);
+$SQL->execute();
+$result = $SQL->fetch();
+if($result['username']) {
+    if(password_verify($_POST['password'], $result['password'])){
+        // Password is correct, so start a new session
+        session_start();
+        // Store data in session variables
+        $_SESSION['loggedin'] = true;
+        $_SESSION['id'] = $result['id'];
+        $_SESSION['username'] = $result['user_name'];
 
 
-            $_SESSION["loggedin"] = true;
-            $_SESSION["id"] = $result["id"];
-            $_SESSION["username"] = $result["username"];
-            session_write_close();
-
-            header("location: list.php");
-
-        }else {
-            $password_error = "Password you entered is not correct";
-        }
-    }else {
-        $username_error = "Username you entered is not correct ";
-
+        // Redirect user to welcome page
+        header("location: list.php");
+    }
+    else {
+        // Display an error message if password is not valid
+        $password_err = "The password you entered was not valid.";
     }
 }
 
@@ -49,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
         <div>
             <label>Username</label>
             <?php echo $username_error;?>
-            <input type="text" name="username" class="form-control" value="">
+            <input type="text" name="username" class="form-control">
         </div>
         <div>
             <?php echo $password_error;?>
