@@ -19,7 +19,7 @@
 <article class="header">
     <h1>The Group Thing's Blog Thing</h1>
     <ul>
-        <li> <i class="fas fa-home"></i> Home </a> </li>
+        <li> <i class="fas fa-home"></i><a href=""> Home </a> </li>
         <li> <i class="fas fa-comments"></i> <a href=""> Messages </a> </li>
         <li> <i class="fas fa-key"></i> <a href=""> Login </a> </li>
         <li> <i class="fas fa-search"></i><a href=""> Search </a> </li>

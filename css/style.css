@@ -13,25 +13,90 @@ body{
 }
 
 h1{
-    font-size: 900;
+    font-style: bold;
+    font-size: 24px;
+    text-align: center;
+    padding:15px;
 }
 
 
-/*navigation*/
-.header{
-    background-color:#ff7f50;
-    height: 200px;
+
+
+/* Navigation + hover */
+.header {
     width: auto;
-}
-
-ul li{
+    margin: 0 auto;
+    background: #ff4757;;
+    padding: 50px 0;
+    background-color:#ff7f50;
+  }
+  .header ul {
     list-style: none;
-    display: inline;
-}
-
-
-
-
+    text-align: center;
+  }
+  .header ul li {
+    display: inline-block;
+  }
+  .header ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #2f3542;;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+.header ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .header ul li a:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+  }
+  .header ul li a:hover:after {
+    -webkit-animation: circle 1.5s ease-in forwards;
+  }
+  
+  /* Keyframes */
+@-webkit-keyframes circle {
+    0% {
+      width: 1px;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      height: 1px;
+      z-index: -1;
+      background: #ff4757;;
+      border-radius: 100%;
+    }
+    100% {
+      background:#ff4757;;
+      height: 5000%;
+      width: 5000%;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 0;
+    }
+  }
 
 
 
@@ -40,7 +105,7 @@ ul li{
     background-color:#ff7f50 ;
     border: solid 2.5px #ff6348;
     border-radius: 10px;
-    box-shadow: 10px 8px #ff4757;
+    box-shadow: 8px 6px #ff4757;
     padding: 10px;
     margin:60px;
 
@@ -50,45 +115,23 @@ ul li{
     background-color: #ff4757 ;
     border: solid 2.5px #ff6348;
     border-radius: 10px;
-    box-shadow: 10px 8px #ff7f50;
+    box-shadow: 8px 6px #ff7f50;
     padding: 10px;
     margin:60px;
 
 }
 
-/*
-
-bubble shape for messages try it up
-.speech-bubble {
-	position: relative;
-	background: #00aabb;
-	border-radius: .4em;
+.user{
+    text-align: end;
+    font-style: italic;
 }
 
 
+/*footer */
 
-.speech-bubble:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 0;
-	height: 0;
-	border: 46px solid transparent;
-	border-top-color: #00aabb;
-	border-bottom: 0;
-	border-right: 0;
-	margin-left: -23px;
-	margin-bottom: -46px;
-}*/
-
-/*
-comic strip style ...ugly
-.user {
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/electric.svg); 
-    width: 25%;
-    height: 25%;
-    font-size: 1.2rem;
-    font-style: italic;
-    padding: 4% 6% 12% 0%;
-  }*/
+.footer{
+    background-color:#ff7f50;
+    height: 100px;
+    width: auto;
+    text-align: end;
+}
