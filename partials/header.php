@@ -29,16 +29,18 @@
 
 <!--list of messages to refer to the loop-->
 <main>
+  
+<input type="submit" value="Add your Message" class="add-message">
 
 <article class="new-message2">
     <div> <p class="user">username</p>
-    </div>
-    
+    </div>    
     <div class="content-message">
         <img src="./images/test.jpg" alt="" style="width:300px">
         <h2 class="title">Message title</h2>
         <p class="message">  Content of the message</p>
     </div>
+    <button type="button"  class="read-message"> <a href="./partials/full-mesage.php"> <p class="read">Read more </p></a> </button>
 </article>
 
 <!DOCTYPE html>
