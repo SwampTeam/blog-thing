@@ -29,23 +29,15 @@
 
 <!--list of messages to refer to the loop-->
 <main>
-<article class="new-message1">
-    <div> <p class="user">username</p>
-    </div>
-    
-    <div class="content-message">
-        <h2 class="title">Message title</h2>
-        <p class="message"> <img src="#" alt=""> Content of the message</p>
-    </div>
-</article>
 
 <article class="new-message2">
     <div> <p class="user">username</p>
     </div>
     
     <div class="content-message">
+        <img src="./images/test.jpg" alt="" style="width:300px">
         <h2 class="title">Message title</h2>
-        <p class="message"> <img src="#" alt=""> Content of the message</p>
+        <p class="message">  Content of the message</p>
     </div>
 </article>
 
