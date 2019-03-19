@@ -3,7 +3,7 @@
 
 function ProcessImage($FileObj)
 {
-    $UpLoadDir = "./images/messages";
+    $UpLoadDir = "./images/messages/";
     // MimeType Checks
 
     //var_dump($FileObj);
