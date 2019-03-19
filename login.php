@@ -11,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"]== "POST") {
 
     //Making the SQL connection
     $SQL = $connection->prepare('SELECT * FROM `users` WHERE `user_name`= :USERNAME' );
-    $SQL = $connection->prepare('SELECT * FROM `users` WHERE `user_pass`= :PASSWORD' );
     //Binding the parameteres
     $SQL ->bindParam(':USERNAME', $_POST['username'], PDO::PARAM_STR);
     $SQL ->execute();
